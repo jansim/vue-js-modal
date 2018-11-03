@@ -392,6 +392,14 @@
                     validator: function(value) {
                         return value >= 0 && value <= 1;
                     }
+                },
+                noPositioning: {
+                    type: Boolean,
+                    default: !1
+                },
+                noSizing: {
+                    type: Boolean,
+                    default: !1
                 }
             },
             components: {
@@ -473,12 +481,14 @@
                     return [ "v--modal-box", this.classes ];
                 },
                 modalStyle: function() {
-                    return {
+                    var modalStyle = {
                         top: this.position.top + "px",
                         left: this.position.left + "px",
                         width: this.trueModalWidth + "px",
                         height: this.isAutoHeight ? "auto" : this.trueModalHeight + "px"
                     };
+                    return this.noSizing && (delete modalStyle.width, delete modalStyle.height), this.noPositioning && (delete modalStyle.top, 
+                    delete modalStyle.left), modalStyle;
                 }
             },
             watch: {

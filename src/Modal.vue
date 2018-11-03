@@ -140,6 +140,14 @@ export default {
       validator (value) {
         return value >= 0 && value <= 1
       }
+    },
+    noPositioning: {
+      type: Boolean,
+      default: false
+    },
+    noSizing: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -336,12 +344,23 @@ export default {
      * CSS styles for position and size of the modal
      */
     modalStyle () {
-      return {
+      let modalStyle = {
         top: this.position.top + 'px',
         left: this.position.left + 'px',
         width: this.trueModalWidth + 'px',
         height: this.isAutoHeight ? 'auto' : this.trueModalHeight + 'px'
       }
+
+      if (this.noSizing) {
+        delete modalStyle.width
+        delete modalStyle.height
+      }
+      if (this.noPositioning) {
+        delete modalStyle.top
+        delete modalStyle.left
+      }
+
+      return modalStyle
     }
   },
   watch: {
