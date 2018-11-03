@@ -36,6 +36,7 @@
             />
           </div>
         </transition>
+        <slot name="outside-modal"/>
       </div>
     </div>
   </transition>

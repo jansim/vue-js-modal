@@ -715,7 +715,7 @@
     }, function(module, exports) {}, function(module, exports) {}, function(module, exports) {}, function(module, exports, __webpack_require__) {
         __webpack_require__(13);
         var Component = __webpack_require__(0)(__webpack_require__(9), __webpack_require__(18), null, null);
-        Component.options.__file = "D:\\Projects\\vue\\vue-js-modal\\src\\Resizer.vue", 
+        Component.options.__file = "/Users/jan/Dev/repositories/vue-js-modal/src/Resizer.vue", 
         Component.esModule && Object.keys(Component.esModule).some(function(key) {
             return "default" !== key && "__esModule" !== key;
         }) && console.error("named exports are not supported in *.vue files."), Component.options.functional && console.error("[vue-loader] Resizer.vue: functional components are not supported with templates, they should use render functions."), 
@@ -860,7 +860,7 @@
                     on: {
                         resize: _vm.handleModalResize
                     }
-                }) : _vm._e() ], 2) : _vm._e() ]) ], 1) ]) : _vm._e() ]);
+                }) : _vm._e() ], 2) : _vm._e() ]), _vm._v(" "), _vm._t("outside-modal") ], 2) ]) : _vm._e() ]);
             },
             staticRenderFns: []
         }, module.exports.render._withStripped = !0;
